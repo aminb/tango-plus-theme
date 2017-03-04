@@ -1,6 +1,7 @@
 ;;; tango-plus-theme.el --- A color theme based on the tango palette
 
 ;; Copyright (C) 2013 Titus von der Malsburg <malsburg@posteo.de>
+;; Copyright (C) 2017 Amin Bandali <amin@aminb.org>
 
 ;; Author: Titus von der Malsburg <malsburg@posteo.de>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
@@ -115,7 +116,7 @@ Semantic, and Ansi-Color faces are included.")
    `(fringe                         ((,class (:foreground ,alum-2
 					      :background ,white))))
    ;; Skipping `scroll-bar', `border'.
-   `(cursor                         ((,class (:inverse-video t))))
+   `(cursor                         ((,class (:background ,blue-3))))
    ;; Skipping `mouse', `tool-bar', `menu'.
    ;; FIXME `help-argument-name'
    ;; Skipping `glyphless-char'.
@@ -142,14 +143,16 @@ Semantic, and Ansi-Color faces are included.")
 					      :slant italic))))
    `(font-lock-doc-face             ((,class (:inherit deemphasized))))
    `(font-lock-keyword-face         ((,class (:foreground ,blue-3
-					      :weight light))))
-   `(font-lock-builtin-face         ((,class (:foreground ,plum-2))))
+					      :weight semi-bold))))
+   `(font-lock-builtin-face         ((,class (:foreground ,plum-2
+					      :weight semi-bold))))
    `(font-lock-function-name-face   ((,class (:foreground ,red-3))))
    `(font-lock-variable-name-face   ((,class (:foreground ,red-3))))
    `(font-lock-type-face            ((,class (:foreground ,red-3))))
    `(font-lock-constant-face        ((,class (:foreground ,choc-3
 					      :slant italic))))
-   `(font-lock-warning-face         ((,class (:foreground ,red-3))))
+   `(font-lock-warning-face         ((,class (:foreground ,red-3
+					      :weight semi-bold))))
    `(font-lock-negation-char-face   ((,class (:foreground ,red-3))))
    `(font-lock-preprocessor-face    ((,class (:inherit deemphasized))))
 
@@ -372,7 +375,7 @@ Semantic, and Ansi-Color faces are included.")
    `(writegood-weasels-face         ((,class (:underline (:color ,red-1 :style wave)))))
    `(writegood-passive-voice-face   ((,class (:inherit writegood-weasels-face))))
    `(writegood-duplicates-face      ((,class (:inherit flyspell-duplicate))))
-   
+
    ;; anzu-mode:
    `(anzu-mode-line                 ((,class (:inherit mode-line))))
    )
